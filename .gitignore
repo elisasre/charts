@@ -1,2 +1,4 @@
-.deploy
-!.deploy/.keep
+*
+!.gitignore
+!index.yaml
+!keydb.png

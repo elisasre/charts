@@ -3,6 +3,33 @@ entries:
   keydb:
   - apiVersion: v2
     appVersion: 6.3.3
+    created: "2023-06-29T18:49:16.604504274Z"
+    description: A Helm chart for KeyDB multimaster setup
+    digest: 8009031583d9c9dd965b703404bb797e2fae5e0631b6bf15eb1ade7bec09f263
+    home: https://keydb.dev
+    icon: https://elisasre.github.io/charts/keydb.png
+    keywords:
+    - keydb
+    - redis
+    - keyvalue
+    - database
+    - multimaster
+    - HA
+    - high-availability
+    maintainers:
+    - email: devops@elisa.fi
+      name: Elisa SRE
+      url: https://github.com/elisasre/charts
+    name: keydb
+    sources:
+    - https://github.com/elisasre/charts
+    - https://github.com/JohnSully/KeyDB
+    type: application
+    urls:
+    - https://github.com/elisasre/charts/releases/download/keydb-0.55.0/keydb-0.55.0.tgz
+    version: 0.55.0
+  - apiVersion: v2
+    appVersion: 6.3.3
     created: "2023-06-28T10:00:11.767409522Z"
     description: A Helm chart for KeyDB multimaster setup
     digest: 9d58aa5b4639f6345457846e62fec80efc24a182ac5d8b7f0e957327b0bbda72
@@ -163,4 +190,4 @@ entries:
     urls:
     - https://github.com/elisasre/charts/releases/download/keydb-0.50.0/keydb-0.50.0.tgz
     version: 0.50.0
-generated: "2023-06-28T10:00:11.767428918Z"
+generated: "2023-06-29T18:49:16.60467359Z"

@@ -187,3 +187,12 @@ existingSecret: keydb-password
 existingSecretPasswordKey: password-key-in-secret-file
 ```
 It is important to use only one way of providing passwords: via plain text under values.yaml or using already existing secret.
+
+## Inspecting runtime config
+
+You can inspect the runtime configuration of a running KeyDB pod by running the following command:
+
+```bash
+kubectl get pods
+kubectl exec -it keydb-<id> -- keydb-cli config get "*"
+```

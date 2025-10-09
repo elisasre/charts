@@ -1,3 +1,7 @@
+# ⚠️ Deprecated Chart
+
+**This chart is deprecated and will not be maintained.**
+
 # KeyDB
 
 [KeyDB](https://keydb.dev) clocks in at 5X faster than Redis (node vs node). KeyDB is a popular drop in Redis alternative that people flock to because it enables you to consolidate a lot of the complexities associated with Redis. KeyDB is multithreaded with the ability to use several storage mediums natively and scale vertically. The superior architecture is enabling KeyDB to become the bridge between cache layer and traditional databases offering performance and durability.

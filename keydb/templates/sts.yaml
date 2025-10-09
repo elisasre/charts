@@ -44,6 +44,18 @@ spec:
         {{- end }}
         imagePullPolicy: {{ .Values.imagePullPolicy }}
         command: ["tini", "--", "docker-entrypoint.sh", "/utils/server.sh"]
+        lifecycle:
+          postStart:
+            exec:
+              command:
+                - /bin/sh
+                - -c
+                - |
+                  until keydb-cli -p ${REDIS_PORT} ${REDIS_PASSWORD:+-a "$REDIS_PASSWORD"} ping > /dev/null 2>&1; do
+                    echo "Waiting for KeyDB to be ready..."
+                    sleep 1
+                  done
+                  keydb-cli -p ${REDIS_PORT} ${REDIS_PASSWORD:+-a "$REDIS_PASSWORD"} ACL SETUSER default -EVAL -EVALSHA
         env:
         - name: REDIS_PORT
           value: {{ .Values.internalPort | quote }}
